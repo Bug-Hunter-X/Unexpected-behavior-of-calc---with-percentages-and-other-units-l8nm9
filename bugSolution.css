@@ -1,0 +1,21 @@
+/* bugSolution.css */
+/* Instead of using percentages directly with other units, we can use a different approach to achieve the desired effect. 
+For example, if we want to set a width that is 50% minus 10px, we can instead calculate the 50% value elsewhere and subtract the 10px from it.*/
+.container {
+  width: 50%; /* Calculate 50% of the parent container */
+}
+.element {
+  width: calc(50% - 10px); /* Incorrect and problematic usage */
+  width: 50%; /* Calculate 50% of the parent container */
+  margin-left: -10px; /* Adjust left margin to achieve similar effect */
+}
+/* Or use a different unit entirely: */
+.element2 {
+  width: calc(50vw - 10px);
+}
+/* Or break down the calc() to simpler expressions:*/
+.element3 {
+  width: 50%;
+  margin-left: 10px;
+  margin-right: 10px; 
+}
